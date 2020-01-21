@@ -1,0 +1,1 @@
+const noteManager = require("noteManager");
