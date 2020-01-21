@@ -4,7 +4,7 @@ const fs = require("fs");
 module.exports = {
     saveNotes(notes) {
         return new Promise((resolve, reject) => {
-            fs.writeFile("notes.json", (err, data) => {
+            fs.writeFile("notes.json", JSON.stringify(notes) , (err) => {
                 if (err) {
                     return reject(err);
                 }
